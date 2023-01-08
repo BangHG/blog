@@ -1,4 +1,4 @@
-# 이 리액트 프로젝트는 2022 코딩애플 강좌 따라하기! 2023-01-06 20:29 banghg
+# 2023-01-06 20:29 banghg
 
 # Getting Started with Create React App
 
