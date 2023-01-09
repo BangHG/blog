@@ -1,14 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-// import IterationSample from './IterationSample.repeat';
-import Counter from './Counter';
+import Info from './Info.useReduce.8.3.2';
 import reportWebVitals from './reportWebVitals';
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Counter></Counter>
+    <Info></Info>
   </React.StrictMode>
 );
 
@@ -16,4 +14,3 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
-

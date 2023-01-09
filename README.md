@@ -1,4 +1,46 @@
-# 2023-01-06 20:29 banghg
+# 리액트를 다루는 방법 따라가기
+
+<!--  2023-01-06 20:29 banghg  -->
+
+- **#4 이벤트 핸들링**
+  - #4.2 예제 [EventPractice.js](src\EventPractice.js)
+    - #4.2.1 컴포넌트 생성 및 불러오기
+    - #4.2.2 onChange 이벤트
+    - #4.2.3 임의 메서드 만들기 : 클래스형 컴포넌트라 패스
+    - #4.2.4 input 여러개 다루기
+    - #4.2.5 onKeyPress
+
+- **#5 ref:DOM에 이름달기**
+  - 클래스형 컴포넌트라 패스. 함수형은 useRef 라는 Hook 씁니다.
+
+- **#6 컴포넌트 반복**
+  - #6.2 데이터 배열을 컴포넌트 배열로 변환하기 
+  - #6.3 key [IterationSample.js](src\IterationSample.js)
+  - #6.4 응용 유동적인 데이터 렌더링 
+    - #6.4.1 초기상태 설정하기 : [IterationSample.6.4.1.js](src\IterationSample.6.4.1.js)
+    - #6.4.2 데이터 추가 기능 구현하기 : [IterationSample.6.4.2.js](src\IterationSample.6.4.2.js)
+    - #6.4.3 데이터 제거 기능 구현하기 : [IterationSample.6.4.3.js](src\IterationSample.6.4.3.js)
+
+- **#7 컴포넌트의 라이프사이클 메서드**
+  - 라이프사이클 메서드는 클래스형 컴포넌트에서만 사용가능하고 함수형에서는 Hook으로 작업합니다.. (시작할때 : useEffect ) 그런고로 패스!
+
+
+- **#8 Hooks**
+  - #8.1 useState [Info.js](src\Info.js)
+    - #8.1.1 useState 여러번 쓰기  [Info.js](src\Info.useState.js)
+      - #8.1.1 자습 여러개 input 다루기  [Info.js](src\Info.useState.several.js)
+  - #8.2 useEffect [Info.js](src\Info.useEffect.js)
+    - 렌더링이 될 때마다 작업수행하기
+    - 마운트될 때만 작업수행하기
+    - 특정값이 업데이트 되었을때만 작업수행하기
+    - 뒷정리함수 : 업데이트 되기 직전, 언마운트 시점에 작업하기.
+  - #8.3 useReducer
+    - #8.3.1 카운터 구현하기 : [Counter.js](src\Counter.useReduce.js)
+    - #8.3.2 인풋 상태 관리하기 : [Info.js](src\Info.useReduce.8.3.2.js)
+
+
+-------------------
+
 
 # Getting Started with Create React App
 
