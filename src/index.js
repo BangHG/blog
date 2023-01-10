@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Info from './Info.useReduce.8.3.2';
+import Average from './Average.repeat';
 import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Info></Info>
+    <Average />
   </React.StrictMode>
 );
 
