@@ -3,9 +3,9 @@ import { AiOutlinePlusCircle } from 'react-icons/ai';
 import styled, { css } from 'styled-components';
 
 const CircleButton = styled.button`
+  /* 여기에 스타일을 작성합니다 (css문법) */
   ${(props) =>
     props.open &&
-    // /* 여기에 스타일을 작성합니다 (css문법) */
     css`
       background: #ff6b6b;
       &:hover {
