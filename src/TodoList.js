@@ -8,16 +8,17 @@ import TodoTemplate from './components/TodoTemplate';
 import TodoHead from './components/TodoHead';
 import TodoList from './components/TodoList';
 import TodoCreate from './components/TodoCreate';
+import { TodoProvider } from './TodoContext';
 
 function ToDoList() {
   return (
-    <div>
+    <TodoProvider>
       <TodoTemplate>
-        <TodoHead></TodoHead>
-        <TodoList></TodoList>
+        <TodoHead />
+        <TodoList />
         <TodoCreate />
       </TodoTemplate>
-    </div>
+    </TodoProvider>
   );
 }
 
