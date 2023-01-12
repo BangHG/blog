@@ -1,7 +1,7 @@
-// TODO: #6 컴포넌트 반복
-// TODO: #6.4 응용 유동적인 데이터 렌더링
+// #6 컴포넌트 반복
+// #6.4 응용 유동적인 데이터 렌더링
 
-// TODO: #6.4.2 데이터 추가 기능 구현하기
+// #6.4.2 데이터 추가 기능 구현하기
 import { useState } from 'react';
 
 const IterationSample = () => {

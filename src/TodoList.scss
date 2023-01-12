@@ -22,22 +22,26 @@ body {
   min-height: 100vh;
   // padding: $padding 0;
   background-color: #eee;
-  font-family: 'NanumSquareNeo-Variable', 'NanumSquare', '나눔스퀘어', '돋움', sans-serif;
+  font-family: 'NanumSquareNeo-Variable', '돋움', sans-serif;
   font-size: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
+  @media all and (max-width: 480px) {
+    font-size: 12px;
+  }
 }
+legend,
+form,
+select,
 input {
-  font-family: 'NanumSquare', '나눔스퀘어', '돋움', sans-serif;
+  font: inherit;
 }
 
 .todoList {
-  width: 512px;
-  // height: 768px;
-  // max-height: calc(100vh - $padding * 2);
-  // overflow: hidden;
-  position: relative; /* 추후 박스 하단에 추가 버튼을 위치시키기 위한 설정 */
+  max-width: 512px;
+  width: calc(100% - 40px);
+  position: relative;
   background: white;
   border-radius: 1rem;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.04);
@@ -70,36 +74,48 @@ input {
       color: #20c997;
       font-size: 1.25em;
       margin-top: 1em;
-      font-weight: bold;
+      font-weight: 500;
+      // font-weight: bold;
     }
   }
   &__list {
     max-height: calc(100vh - #{$padding} * 2 - 9.25rem);
+    min-height: 6em + 4em;
+    position: relative;
     flex: 1;
-    padding: 20px 32px;
-    padding-bottom: 48px;
+    padding: 2em 2em;
     overflow-y: auto;
   }
   &__item {
     display: flex;
-    align-items: center;
-    height: 1.5em;
+    // align-items: center;
+    align-items: flex-start;
+    position: relative;
+    // min-height: 1.5em;
     margin: 0.5em auto;
+    word-break: break-all;
+
     &:hover {
       .remove {
-        display: initial;
+        // display: initial;
+        opacity: 1;
       }
     }
   }
 
   .remove {
+    // position: absolute;
+    // right: 0;
+    // top: 0;
+    // bottom: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #dee2e6;
     font-size: 1.3em;
     cursor: pointer;
-    display: none;
+    // display: none;
+    opacity: 0;
     &:hover {
       color: #ff6b6b;
     }
@@ -131,11 +147,7 @@ input {
   position: absolute;
   .InsertForm {
     background: #f8f9fa;
-    padding-left: 32px;
-    padding-top: 32px;
-    padding-right: 32px;
-    padding-bottom: 72px;
-
+    padding: 2em 2em 3em;
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
     border-top: 1px solid #e9ecef;
@@ -146,7 +158,8 @@ input {
     border: 1px solid #dee2e6;
     width: 100%;
     outline: none;
-    font-size: 18px;
+    font-size: 1em;
+    // font-size: 18px;
     box-sizing: border-box;
     width: 100%;
   }
