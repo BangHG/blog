@@ -14,9 +14,9 @@ function ToDoList() {
   return (
     <TodoProvider>
       <TodoTemplate>
-        <TodoHead />
-        <TodoList />
-        <TodoCreate />
+        <TodoHead></TodoHead>
+        <TodoList></TodoList>
+        <TodoCreate></TodoCreate>
       </TodoTemplate>
     </TodoProvider>
   );
