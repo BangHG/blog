@@ -23,6 +23,8 @@ function reducer(currentState, action) {
 
   return newState;
 }
+
+// createStore로 저장공간을 만들고 리듀서를 넣는다 (reduxjs/toolkit 내장함수)
 const store = createStore(reducer); //스토어 생성
 
 export default function App() {
