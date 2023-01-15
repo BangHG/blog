@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'NanumSquareNeo-Variable';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; */
+  font-family: 'NanumSquareNeo-Variable', '돋움', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+body {
+  background-color: #eee;
+  padding: 25px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+$main-color: #d4e286;
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  h1 {
+    display: block;
+    width: 100%;
+  }
+  &,
+  div {
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 5px;
+    border: 10px outset darken(rgba($main-color, 0.4), 20%);
+    background-color: rgba($main-color, 0.2);
+  }
+  > div {
+    flex: 1 1 calc(50% - 10px);
+    width: calc(50% - 10px);
+  }
+  button {
+    font-size: 1.2rem;
+    margin-left: 1em;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 0.3em;
+    line-height: 1;
+    border: 2px solid darken(rgba($main-color, 0.7), 20%);
+    background: rgba($main-color, 0.9);
+  }
+}
