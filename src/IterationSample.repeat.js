@@ -49,7 +49,7 @@ const IterationSample = () => {
   return (
     <div>
       <h1>반복테스트</h1>
-      <input type='text' value={input} onKeyPress={onKeyPress} onChange={onChange} />
+      <input type="text" value={input} onKeyPress={onKeyPress} onChange={onChange} />
       <button onClick={onClick}>추가</button>
       <ul>{nameList}</ul>
     </div>

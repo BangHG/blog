@@ -1,4 +1,4 @@
-﻿// #8.5 useCallback : 렌더링 성능 최적화하기. : 함수 재사용
+// #8.5 useCallback : 렌더링 성능 최적화하기. : 함수 재사용
 // #useCallback: useCallback([생성하고싶은함수],[어떤값이 바뀌었을때 함수를 새로 생성해야하는지?])
 
 import { useMemo, useState, useCallback } from 'react';

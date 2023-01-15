@@ -1,4 +1,4 @@
-﻿import { useState, useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 
 const getAverage = (numbers) => {
   if (numbers.length === 0) {

@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { AiOutlinePlusCircle } from 'react-icons/ai';
 import styled, { css } from 'styled-components';
 import { useTodoNextId, useTodoDispatch } from '../TodoContext';

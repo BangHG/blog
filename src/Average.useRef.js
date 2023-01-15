@@ -1,4 +1,4 @@
-﻿// #8.6 useRef 사용하기 : ref 는 DOM을 꼭 직접 건드려야할 때 사용합니다. (5장 143p)
+// #8.6 useRef 사용하기 : ref 는 DOM을 꼭 직접 건드려야할 때 사용합니다. (5장 143p)
 
 import { useMemo, useState, useCallback, useRef } from 'react';
 

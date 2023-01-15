@@ -1,4 +1,4 @@
-﻿// #8.4 useMemo
+// #8.4 useMemo
 
 import { useMemo, useState } from 'react';
 

@@ -1,25 +1,68 @@
-// 2023-01-11 16:25
-// 예제 : https://react.vlpt.us/mashup-todolist/01-create-components.html
-// ICON: https://react-icons.github.io/react-icons/icons?name=md
-
-import React from 'react';
-import './TodoList.scss';
+import { useCallback, useRef, useState } from 'react';
 import TodoTemplate from './components/TodoTemplate';
-import TodoHead from './components/TodoHead';
+import TodoInsert from './components/TodoInsert';
 import TodoList from './components/TodoList';
-import TodoCreate from './components/TodoCreate';
-import { TodoProvider } from './TodoContext';
 
-function ToDoList() {
-  return (
-    <TodoProvider>
-      <TodoTemplate>
-        <TodoHead> </TodoHead>
-        <TodoList> </TodoList>
-        <TodoCreate> </TodoCreate>
-      </TodoTemplate>
-    </TodoProvider>
+const App = () => {
+  const [todos, setTodos] = useState([
+    {
+      id: 0,
+      text: '운동하기',
+      checked: true,
+    },
+    {
+      id: 1,
+      text: 'todo 리스트 만들기',
+      checked: false,
+    },
+    {
+      id: 2,
+      text: '저녁먹기',
+      checked: false,
+    },
+    {
+      id: 3,
+      text: '씻고자기',
+      checked: false,
+    },
+  ]);
+
+  // const [id, nextId] = setState(4)
+  const nextId = useRef(4);
+  const onInsert = useCallback(
+    (text) => {
+      const todo = {
+        id: nextId.current,
+        text,
+        check: false,
+      };
+      setTodos(todos.concat(todo));
+      nextId.current += 1;
+    },
+    [todos]
   );
-}
 
-export default ToDoList;
+  const onRemove = useCallback(
+    (id) => {
+      setTodos(todos.filter((todo) => todo.id !== id));
+    },
+    [todos]
+  );
+
+  const onToggle = useCallback(
+    (id) => {
+      setTodos(todos.map((todo) => (todo.id === id ? { ...todo, checked: !todo.checked } : todo)));
+    },
+    [todos]
+  );
+
+  return (
+    <TodoTemplate>
+      <TodoInsert onInsert={onInsert} />
+      <TodoList todos={todos} onRemove={onRemove} onToggle={onToggle}></TodoList>
+    </TodoTemplate>
+  );
+};
+
+export default App;
+

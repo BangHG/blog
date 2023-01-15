@@ -1,0 +1,9 @@
+@use 'sass:math';
+@function rem($val) {
+  // @return (math.div($val, 18rem));
+  @return ($val/18 + rem);
+}
+
+$main-color: #9fca39;
+$danger-color: #ff6b6b;
+

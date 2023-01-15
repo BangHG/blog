@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { useTodoState } from '../TodoContext';
 
 function TodoHead() {
@@ -20,10 +20,10 @@ function TodoHead() {
   const dayName = today.toLocaleDateString('ko-KR', { weekday: 'long' });
 
   return (
-    <header className='todoList__head'>
+    <header className="todoList__head">
       <h1>{dateString}</h1>
-      <p className='day'>{dayName}</p>
-      <div className='tasks-left'>할 일 {undoneTasks.length}개 남음</div>
+      <p className="day">{dayName}</p>
+      <div className="tasks-left">할 일 {undoneTasks.length}개 남음</div>
     </header>
   );
 }

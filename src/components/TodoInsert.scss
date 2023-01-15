@@ -1,0 +1,43 @@
+@import 'var';
+
+@font-face {
+  font-family: 'NanumSquareNeo-Variable';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #eee;
+  font-size: 18px;
+  font-family: 'NanumSquareNeo-Variable', '돋움', sans-serif;
+}
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0 20px;
+}
+.TodoTemplate {
+  max-width: rem(512);
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: #fff;
+  .app-title {
+    background-color: $main-color;
+    color: #fff;
+    padding: 1em;
+    font-size: 1.4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .content {
+    background-color: #fff;
+  }
+}
+
