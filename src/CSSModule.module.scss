@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'NanumSquareNeo-Variable';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  font-family: 'NanumSquareNeo-Variable';
+  font-weight: 100;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+$color: rgb(187, 255, 254);
+.wrapper {
+  background-color: $color;
+  margin: 1rem;
+  padding: 2rem;
+  border: 4px solid darken($color, 10%);
+  font-size: 2rem;
+  &.grayscaled {
+    filter: grayscale(1);
+  }
+}
+.something {
+  color: darken($color, 50%);
+  &:before {
+    content: '내 클래스는 ' attr(class);
+  }
+}
+:global .something {
+  // display: inline-block;
+  background-color: darken($color, 10%);
+  &:before {
+    content: '내 클래스는 ' attr(class);
+  }
+}

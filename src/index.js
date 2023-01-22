@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 // import './index.css';
-import Counter from './Counter.useReduce';
+import CSSModule from './CSSModule';
 import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Counter></Counter>
+    <CSSModule></CSSModule>
   </React.StrictMode>
 );
 
