@@ -1,7 +1,7 @@
 import classNames from 'classnames/bind';
 import styles from './CSSModule.module.scss';
 
-const cm = classNames.bind(styles);
+const cn = classNames.bind(styles);
 const CSSModule = () => {
   return (
     <main>
@@ -12,11 +12,11 @@ const CSSModule = () => {
     // </div> */}
 
       {/* // classNames.bind 사용하면 아래와 같이 styles.[클래스명] 안붙여줘도 된다! */}
-      {/* // <div className={cm('wrapper', 'grayscaled')}> */}
-      <div className={cm('wrapper')}>
+      {/* // <div className={cn('wrapper', 'grayscaled')}> */}
+      <div className={cn('wrapper')}>
         안녕하세요
         <p className="something"></p>
-        <p className={cm('something')}></p>
+        <p className={cn('something')}></p>
       </div>
     </main>
   );
