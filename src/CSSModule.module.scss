@@ -21,6 +21,12 @@ $color: rgb(187, 255, 254);
   padding: 2rem;
   border: 4px solid darken($color, 10%);
   font-size: 2rem;
+  &:before {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    content: '내 클래스이름은 ' attr(class);
+  }
   &.grayscaled {
     filter: grayscale(1);
   }
@@ -28,13 +34,19 @@ $color: rgb(187, 255, 254);
 .something {
   color: darken($color, 50%);
   &:before {
-    content: '내 클래스는 ' attr(class);
+    font-size: 0.8em;
+    line-height: 1.3;
+    white-space: pre;
+    content: '나는 CSSModule! \A 내 클래스이름은 'attr(class);
   }
 }
 :global .something {
   // display: inline-block;
   background-color: darken($color, 10%);
   &:before {
-    content: '내 클래스는 ' attr(class);
+    font-size: 0.8em;
+    line-height: 1.3;
+    white-space: pre;
+    content: '나는 global css! \A 내 클래스이름은 'attr(class);
   }
 }

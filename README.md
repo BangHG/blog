@@ -83,9 +83,9 @@
   - #6.2 데이터 배열을 컴포넌트 배열로 변환하기
   - #6.3 key [IterationSample.js](src\IterationSample.js)
   - #6.4 응용 유동적인 데이터 렌더링
-    - #6.4.1 초기상태 설정하기 : [IterationSample.6.4.1.js](src\IterationSample.6.4.1.js)
-    - #6.4.2 데이터 추가 기능 구현하기 : [IterationSample.6.4.2.js](src\IterationSample.6.4.2.js)
-    - #6.4.3 데이터 제거 기능 구현하기 : [IterationSample.6.4.3.js](src\IterationSample.6.4.3.js)
+    - #6.4.1 초기상태 설정하기 [IterationSample.6.4.1.js](src\IterationSample.6.4.1.js)
+    - #6.4.2 데이터 추가 기능 구현하기 [IterationSample.6.4.2.js](src\IterationSample.6.4.2.js)
+    - #6.4.3 데이터 제거 기능 구현하기 [IterationSample.6.4.3.js](src\IterationSample.6.4.3.js)
 
 ---
 
@@ -120,8 +120,8 @@
     - 특정값이 업데이트 되었을때만 작업수행하기
     - 뒷정리함수 : 업데이트 되기 직전, 언마운트 시점에 작업하기.
   - #8.3 useReducer
-    - #8.3.1 카운터 구현하기 : [Counter.js](src\Counter.useReduce.js)
-    - #8.3.2 인풋 상태 관리하기 : [Info.js](src\Info.useReduce.8.3.2.js)
+    - #8.3.1 카운터 구현하기 [Counter.js](src\Counter.useReduce.js)
+    - #8.3.2 인풋 상태 관리하기 [Info.js](src\Info.useReduce.8.3.2.js)
   - #8.4 useMemo [Average.js](src\Average.js)
   - #8.5 useCallback [Average.js](src\Average.callback.js)
   - #8.6 useRef 사용하기 [Average.js](src\Average.useRef.js)
