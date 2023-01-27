@@ -137,13 +137,13 @@
     - #9.1.2 CSS Selector
   - #9.2 Sass 사용하기
     - #9.2.1 utils 함수 분리하기
-    - #9.2.2 sass-loader 설정 커스터마이징하기
+    - #9.2.2 sass-loader 설정 커스터마이징하기 _:경로설정 간편하게 만들기. 나중에 필요하면 적용해보자.._
     - #9.2.3 node_modules에서 라이브러리 불러오기
   - #9.3 CSS Module [CSSModule.js](src\CSSModule.js)
     - #9.3.1 classnames
     - #9.3.2 Sass와 함께 사용하기
     - #9.3.3 CSS Module이 아닌 파일에서 CSS Module 사용하기
-  - #9.4 styled-components
+  - #9.4 styled-components [CSSinJS.js](src\CSSinJS.js)
     - #9.4.1 Tagged 템플릿 리터럴
     - #9.4.2 스타일링된 엘리먼트 만들기
     - #9.4.3 스타일에서 props 조회하기

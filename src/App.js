@@ -1,6 +1,7 @@
+// 코딩애플 react강의: 블로그만들기
+// https://www.youtube.com/watch?v=uab4P-0Gpzk&list=PLfLgtT94nNq0qTRunX9OEmUzQv4lI4pnP&index=6
 import { useState } from 'react';
 import './App.scss';
-
 function App() {
   let post = '돈가스 맛집';
   const [a, aSet] = useState(['돈가스 맛집 리스트', '가라아게 맛집 리스트', '하이볼 맛집 리스트']);
@@ -11,7 +12,6 @@ function App() {
     reactionSet(reaction + 1);
   }
   return (
-    // https://www.youtube.com/watch?v=uab4P-0Gpzk&list=PLfLgtT94nNq0qTRunX9OEmUzQv4lI4pnP&index=6
     <div className="App">
       <div className="black-nav">
         <h4>블로그</h4>
