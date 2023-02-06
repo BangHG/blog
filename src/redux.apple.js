@@ -16,7 +16,7 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { createStore } from 'redux';
 
-function App() {
+function ReduxApple() {
   // const number = useSelector((state) => state);
   // const text = useSelector((text) => text);
   // useSelector는 redux에서 상태를 불러오는것
@@ -25,31 +25,24 @@ function App() {
   const dispatch = useDispatch();
 
   const number = useSelector((state) => state.number);
-  const text = useSelector((state) => state.text);
+  const reduxText = useSelector((state) => state.reduxText);
 
-  const [value, setValue] = useState(text);
+  const [value, setValue] = useState(reduxText);
 
   return (
     <div>
       <h1>
         숫자는 {number}
         <br />
-        글자는 {text}
+        글은 "{reduxText}"
         <br />
         지금 쓴 글은 {value}
       </h1>
-      {/* dispatch(e.target); */}
-      <div>
+      {/* <div>
         <form action="#" style={{ display: 'flex', margin: '10px auto' }}>
-          <input
-            type="text"
-            value={value}
-            onChange={(e) => {
-              dispatch(e.target);
-            }}
-          />
+          <input type="text" value={value} onChange={onChange} />
         </form>
-      </div>
+      </div> */}
       <div style={{ display: 'flex', gap: 10 }}>
         <button onClick={() => dispatch({ type: 'PLUS' })}>Plus 5</button>
         <button onClick={() => dispatch({ type: 'MINUS' })}>Minus 5</button>
@@ -58,4 +51,4 @@ function App() {
   );
 }
 
-export default App;
+export default ReduxApple;

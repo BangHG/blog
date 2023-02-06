@@ -7,19 +7,19 @@
   font-style: normal;
 }
 
-body {
-  min-height: 100vh;
-  background-color: #eee;
-  font-size: 18px;
-  font-family: 'NanumSquareNeo-Variable', '돋움', sans-serif;
-}
-#root {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 0 20px;
-}
+// body {
+//   min-height: 100vh;
+//   background-color: #eee;
+//   font-size: 18px;
+//   font-family: 'NanumSquareNeo-Variable', '돋움', sans-serif;
+// }
+// #root {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   min-height: 100vh;
+//   padding: 0 20px;
+// }
 .TodoTemplate {
   max-width: rem(512);
   width: 100%;
@@ -40,4 +40,3 @@ body {
     background-color: #fff;
   }
 }
-

@@ -12,13 +12,15 @@ import { TodoProvider } from './TodoContext';
 
 function ToDoList() {
   return (
-    <TodoProvider>
-      <TodoTemplate>
-        <TodoHead> </TodoHead>
-        <TodoList> </TodoList>
-        <TodoCreate> </TodoCreate>
-      </TodoTemplate>
-    </TodoProvider>
+    <div className="todoList__body">
+      <TodoProvider>
+        <TodoTemplate>
+          <TodoHead> </TodoHead>
+          <TodoList> </TodoList>
+          <TodoCreate> </TodoCreate>
+        </TodoTemplate>
+      </TodoProvider>
+    </div>
   );
 }
 

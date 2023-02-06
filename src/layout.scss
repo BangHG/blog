@@ -1,0 +1,76 @@
+﻿@font-face {
+  font-family: 'NanumSquareNeo-Variable';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  font-family: 'NanumSquareNeo-Variable';
+  font-weight: 100;
+}
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+button[type=''] {
+  padding: 0.5em;
+}
+
+* {
+  &:before,
+  &:after,
+  & {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+#root > .App {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.layoutList {
+  b {
+    font-weight: bold;
+  }
+}
+.layoutHeader {
+  background: rgb(230, 230, 230);
+  gap: 5px;
+  height: 50px;
+  display: flex;
+  padding: 0 20px;
+  align-items: center;
+}
+.layoutMain {
+  width: 100vw;
+  background-color: #fff;
+  padding: 20px;
+  min-height: calc(100vh - 100px);
+}
+.layoutFooter {
+  background: rgb(230, 230, 170);
+  height: 50px;
+  display: flex;
+  padding: 0 20px;
+  align-items: center;
+}
+
+.pageDesc {
+  margin-top: 1em;
+  padding: 1em;
+  line-height: 1.5;
+  background-color: #444;
+  color: #fff;
+  display: block;
+  font-family: 'D2Coding', Consolas, 'Courier New', monospace;
+  letter-spacing: -0.05em;
+  white-space: pre;
+  margin: 1em 0px;
+}

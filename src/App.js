@@ -1,94 +1,52 @@
-// 코딩애플 react강의: 블로그만들기
-// https://www.youtube.com/watch?v=uab4P-0Gpzk&list=PLfLgtT94nNq0qTRunX9OEmUzQv4lI4pnP&index=6
+import { Fragment } from 'react';
+import { createStore } from 'redux';
 import { useState } from 'react';
-import './App.scss';
-function App() {
-  let post = '돈가스 맛집';
-  const [a, aSet] = useState(['돈가스 맛집 리스트', '가라아게 맛집 리스트', '하이볼 맛집 리스트']);
-  const [reaction, reactionSet] = useState(0);
+import { useDispatch, useSelector } from 'react-redux';
 
-  function reactionLike() {
-    console.log('좋아요!');
-    reactionSet(reaction + 1);
-  }
+import List from './List';
+import Blog from './Blog';
+import ReduxApple from './redux.apple';
+
+import IterationSample2 from './IterationSample.6.4.3';
+
+import Info5 from './Info.useReduce.8.3.2';
+import Counter from './Counter.useReduce';
+
+import Average3 from './Average.useRef';
+
+import CSSModule from './CSSModule';
+import CSSinJS from './CSSinJS';
+
+import TodoListWeb from './TodoListWeb';
+import TodoList from './TodoList';
+
+import { Route, Routes } from 'react-router-dom';
+import Layout from './Layout';
+
+const App = () => {
   return (
-    <div className="App">
-      <div className="black-nav">
-        <h4>블로그</h4>
-      </div>
-      <section className="post-list">
-        <button
-          onClick={() => {
-            let aCopy = [...a]; //배열을 복사할땐 Spread syntax(스프레드 연산자)
-            aCopy[0] = '여자코트 추천'; // 사본을 수정하고!
-            aSet(aCopy); //사본을 state변경해주기
-          }}
-        >
-          날 한번 눌러봐!
-        </button>
+    <>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<List />}></Route>
+          <Route path="/Blog" element={<Blog />}></Route>
+          <Route path="/ReduxApple" element={<ReduxApple />}></Route>
 
-        <button
-          style={{ marginLeft: '5px' }}
-          onClick={() => {
-            let aSort = [...a];
-            aSort.sort();
-            aSet(aSort);
-            console.log(a);
-          }}
-        >
-          가나다 순으로 정렬하기
-        </button>
-        <article>
-          <h5>{a[0]}</h5>
-          <div>
-            <button className="reaction-btn" onClick={reactionLike}>
-              좋아요👍 <span>{reaction}</span>
-            </button>
-          </div>
-          <p>글내용</p>
-        </article>
-        <article>
-          <h5>{a[1]}</h5>
-          <div>
-            <button className="reaction-btn">
-              좋아요👍 <span>0</span>
-            </button>
-          </div>
-          <p>글내용</p>
-        </article>
-        <article>
-          <h5>{a[2]}</h5>
-          <div>
-            <button className="reaction-btn">
-              좋아요👍 <span>0</span>
-            </button>
-          </div>
-          <p>글내용</p>
-        </article>
-      </section>
-      <Modal title="타이틀입니다1"></Modal>
-      <Modal title="타이틀입니다2"></Modal>
-      <Modal title="타이틀입니다3"></Modal>
-      {/* 중괄호를 넣어서 변수표현을 할 수 있다 */}
-    </div>
-  );
-}
+          <Route path="/IterationSample2" element={<IterationSample2></IterationSample2>}></Route>
 
-// 컴포넌트 만들기는? : 큰페이지, 반복적인 html 축약 사용.
-// 1. function 만들기
-// 2. return안에 html담기
-// 3. <함수명/> 쓰기
-function Modal({ title }) {
-  return (
-    <div className="modal">
-      <h4>{title}</h4>
-      <p>2023-01-06 22:25</p>
-      <p>
-        내용 Lorem ipsum dolor sit amet.
-        <br />
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus tempore voluptates debitis, quasi molestias distinctio eius! Debitis deserunt sint officia autem voluptate ex quam aperiam asperiores officiis impedit magnam sequi praesentium tempora obcaecati, totam ad similique veritatis. Aliquam, cupiditate, aperiam blanditiis tempora, vel dicta ullam asperiores incidunt amet iste quasi.
-      </p>
-    </div>
+          <Route path="/Info5" element={<Info5></Info5>}></Route>
+
+          <Route path="/Counter" element={<Counter></Counter>}></Route>
+
+          <Route path="/Average3" element={<Average3></Average3>}></Route>
+          <Route path="/CSSModule" element={<CSSModule></CSSModule>}></Route>
+          <Route path="/CSSinJS" element={<CSSinJS></CSSinJS>}></Route>
+          <Route path="/TodoListWeb" element={<TodoListWeb></TodoListWeb>}></Route>
+          <Route path="/TodoList" element={<TodoList></TodoList>}></Route>
+        </Route>
+      </Routes>
+    </>
   );
-}
+};
+
 export default App;

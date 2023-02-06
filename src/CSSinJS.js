@@ -57,9 +57,6 @@ const Something = styled.p`
 const CSSinJS = () => {
   return (
     <main>
-      <styledSample />
-      <styledSample />
-      <styledSample>뭥..</styledSample>
       <Wrapper color="#bbfffe">
         Hello.. It's me..
         <Something color="#a3fea3"></Something>

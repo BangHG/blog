@@ -43,7 +43,7 @@ const Average = () => {
       <input type="number" onChange={onChange} value={number} onKeyUp={onKeyUp} />
       <button onClick={onInsert}>등록</button>
 
-      <ul style={{ maxHeight: '50vh', border: '1px solid #ddd', overflow: 'auto' }}>
+      <ul style={{ maxHeight: '50vh', padding: '1em', border: '1px solid #ddd', overflow: 'auto' }}>
         {list.map((value, index) => (
           <li key={index}>{value}</li>
         ))}

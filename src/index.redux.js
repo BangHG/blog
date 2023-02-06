@@ -2,8 +2,9 @@ import { Provider, useDispatch, useSelector } from 'react-redux';
 import { createStore } from 'redux';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './redux.apple';
+import ReduxApple from './redux.apple';
 import reportWebVitals from './reportWebVitals';
+import ReduxApple from './redux.apple';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 function reducer(currentState, action, payload) {
@@ -44,7 +45,7 @@ let store = createStore(reducer);
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App></App>
+      <ReduxApple></ReduxApple>
     </Provider>
   </React.StrictMode>
 );

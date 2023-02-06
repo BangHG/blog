@@ -1,7 +1,7 @@
 // #6 컴포넌트 반복
 // #6.4 응용 유동적인 데이터 렌더링
 // #6.4.3 데이터 제거 기능 구현하기
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 
 const IterationSample = () => {
   const [names, setName] = useState([
@@ -13,7 +13,7 @@ const IterationSample = () => {
   const [inputText, setInputText] = useState('');
   const [nextId, setNextId] = useState(5); //새로운 항목을 추가할때 사용할 id
 
-  const onChange = (e) => setInputText(e.target.value);
+  const onChange = useCallback((e) => setInputText(e.target.value), [inputText]);
   const nameList = names.map((name) => (
     <li key={name.id} onDoubleClick={() => onRemove(name.id)}>
       {name.id} : {name.text}
@@ -37,15 +37,18 @@ const IterationSample = () => {
     setInputText('');
   };
   const onKeyPress = (e) => {
-    if (e.key === 'Enter');
-    onClick();
+    if (e.key === 'Enter') {
+      onClick();
+    }
   };
   return (
     <div style={{ padding: '25px' }}>
-      <input type="text" value={inputText} onChange={onChange} onKeyPress={onKeyPress} />
-      <button onClick={onClick}>추가</button>
-      내가친 텍스트 : {inputText}
-      <ul>{nameList}</ul>
+      <input style={{ padding: '0.5em' }} type="text" value={inputText} onChange={onChange} onKeyDown={onKeyPress} />
+      <button style={{ padding: '0.5em' }} onClick={onClick}>
+        추가
+      </button>
+      <span style={{ marginLeft: '1em' }}>내가친 텍스트 : {inputText}</span>
+      <ul style={{ margin: '1em' }}>{nameList}</ul>
     </div>
   );
 };
