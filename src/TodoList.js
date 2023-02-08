@@ -4,29 +4,43 @@ import TodoInsert from './components/TodoInsert';
 import TodoList from './components/TodoList';
 
 const App = () => {
-  const [todos, setTodos] = useState([
-    {
-      id: 0,
-      text: '운동하기',
-      checked: true,
-    },
-    {
-      id: 1,
-      text: 'todo 리스트 만들기',
-      checked: false,
-    },
-    {
-      id: 2,
-      text: '저녁먹기',
-      checked: false,
-    },
-    {
-      id: 3,
-      text: '씻고자기',
-      checked: false,
-    },
-  ]);
+  const [todos, setTodos] = useState(
+    // [
+    // {
+    //   id: 0,
+    //   text: '운동하기',
+    //   checked: true,
+    // },
+    // {
+    //   id: 1,
+    //   text: 'todo 리스트 만들기',
+    //   checked: false,
+    // },
+    // {
+    //   id: 2,
+    //   text: '저녁먹기',
+    //   checked: false,
+    // },
+    // {
+    //   id: 3,
+    //   text: '씻고자기',
+    //   checked: false,
+    // },
+  // ]
+    createBulk
+  );
 
+  function createBulk(){
+    const arr = [];
+    for(let i = 1; i<=2000 ;i++){
+      arr.push({
+        id:i,
+        text:`할일 ${i}`,
+        checked:false
+      })
+    }
+    return arr;
+  }
   // const [id, nextId] = setState(4)
   const nextId = useRef(4);
   const onInsert = useCallback(
