@@ -41,6 +41,11 @@ const List = () => {
             <b>App:</b> TodoList.js
           </Link>
         </li>
+        <li>
+          <Link to={'/TodoList2'}>
+            <b>App:</b> TodoList.js : 최적화
+          </Link>
+        </li>
       </ul>
       <hr style={{ margin: '20px auto' }} />
       <h3>기타</h3>

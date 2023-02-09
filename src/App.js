@@ -19,6 +19,7 @@ import CSSinJS from './CSSinJS';
 
 import TodoListWeb from './TodoListWeb';
 import TodoList from './TodoList';
+import TodoList2 from './TodoList.11.5';
 
 import { Route, Routes } from 'react-router-dom';
 import Layout from './Layout';
@@ -43,6 +44,7 @@ const App = () => {
           <Route path="/CSSinJS" element={<CSSinJS></CSSinJS>}></Route>
           <Route path="/TodoListWeb" element={<TodoListWeb></TodoListWeb>}></Route>
           <Route path="/TodoList" element={<TodoList></TodoList>}></Route>
+          <Route path="/TodoList2" element={<TodoList2></TodoList2>}></Route>
         </Route>
       </Routes>
     </>

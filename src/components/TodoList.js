@@ -1,3 +1,4 @@
+import React from 'react';
 import TodoListItem from './TodoListItem';
 import './TodoList.scss';
 
@@ -11,5 +12,5 @@ const TodoList = ({ todos, onRemove, onToggle }) => {
   );
 };
 
-export default TodoList;
+export default React.memo(TodoList); //#11.7 TodoList 컴포넌트 최적화하기
 
