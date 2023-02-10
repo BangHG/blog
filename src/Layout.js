@@ -11,7 +11,7 @@ const Layout = () => {
       <main className="layoutMain">
         <Outlet></Outlet>
       </main>
-      <footer className="layoutFooter">푸터입니다</footer>
+      {/* <footer className="layoutFooter">푸터입니다</footer> */}
     </div>
   );
 };

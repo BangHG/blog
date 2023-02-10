@@ -1,9 +1,9 @@
 @import 'var';
 
 .TodoList {
-  min-height: (1.5rem + 2rem) * 4;
-  max-height: (1.5rem + 2rem) * 8.5;
-  overflow-y: auto;
+  // min-height: (1.5rem + 2rem) * 4;
+  // max-height: (1.5rem + 2rem) * 8.5;
+  // overflow-y: auto;
 }
 .TodoListItem {
   line-height: 1.3;
@@ -49,5 +49,12 @@
   & + & {
     border-top: 1px solid #ddd;
   }
+  &-virtualized {
+    & + & {
+      border-top: 1px solid #ddd;
+    }
+    &:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+  }
 }
-
