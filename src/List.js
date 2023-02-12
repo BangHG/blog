@@ -1,9 +1,16 @@
 import { Link } from 'react-router-dom';
 
+function Title({ children }) {
+  return (
+    <h3 className="layoutList__title">
+      <span>{children}</span>
+    </h3>
+  );
+}
 const List = () => {
   return (
     <div className="layoutList">
-      <h3>React 교재</h3>
+      <Title>React 교재</Title>
       <ul>
         <li>
           <Link to={'/IterationSample2'}>
@@ -96,26 +103,26 @@ const List = () => {
         </li>
       </ul>
       <hr />
-      <h3>기타</h3>
+      <Title>기타</Title>
       <ul>
         <li>
           <Link to={'/blog'}>
             <p>
-              <b> :</b> 블로그 Blog (코딩애플)
+              <b></b> 블로그 Blog (코딩애플)
             </p>
           </Link>
         </li>
         <li>
           <Link to={'/ReduxApple'}>
             <p>
-              <b> :</b> redux AppleCoding 강좌
+              <b></b> redux AppleCoding 강좌
             </p>
           </Link>
         </li>
         <li>
           <Link to={'/TodoListWeb'}>
             <p>
-              <b> :</b> TodoList.js : 패캠버전
+              <b></b> TodoList.js : 패캠버전
             </p>
           </Link>
         </li>

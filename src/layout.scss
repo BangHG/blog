@@ -37,9 +37,15 @@ button[type=''] {
 }
 
 .layoutList {
+  &__title {
+    span {
+      padding: 0 0.2em;
+      background-color: rgb(200, 240, 206);
+    }
+  }
   hr {
     min-width: 2.7em;
-    display: inline-block;
+    display: block;
     margin: 20px auto;
   }
   ul {
