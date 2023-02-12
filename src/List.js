@@ -86,6 +86,14 @@ const List = () => {
             </p>
           </Link>
         </li>
+        <li>
+          <Link to={'/Mypage'}>
+            <span>#13.6</span>
+            <p>
+              <b>Route:Navigate Component</b> 마이페이지 가보기
+            </p>
+          </Link>
+        </li>
       </ul>
       <hr />
       <h3>기타</h3>

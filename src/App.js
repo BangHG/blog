@@ -59,13 +59,13 @@ const App = () => {
             <Route path=":id" element={<Article></Article>} />
           </Route>
           {/* 얼마든지 중첩이 가능하군아 */}
+          {/* #13.6.4 Navigate 컴포넌트 */}
+          <Route path="/Login" element={<Login />}></Route>
+          <Route path="/Mypage" element={<Mypage />}></Route>
         </Route>
 
         {/* #13.6.3 NotFound 페이지 만들기 */}
         <Route path="*" element={<NotFound />}></Route>
-        {/* #13.6.4 Navigate 컴포넌트 */}
-        <Route path="/Login" element={<Login />}></Route>
-        <Route path="/Mypage" element={<Mypage />}></Route>
       </Routes>
     </>
   );
