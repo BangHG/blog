@@ -35,11 +35,44 @@ button[type=''] {
   margin: 0;
   padding: 0;
 }
+
 .layoutList {
-  b {
-    font-weight: bold;
+  hr {
+    min-width: 2.7em;
+    display: inline-block;
+    margin: 20px auto;
+  }
+  ul {
+    display: grid;
+    list-style: disc;
+    padding: 1em;
+    row-gap: 0.5em;
+  }
+  a {
+    display: flex;
+    word-break: keep-all;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    > span {
+      flex: 0 0 auto;
+      min-width: 2.7em;
+      display: inline-block;
+      margin-right: 0.3em;
+    }
+
+    &:visited {
+      color: inherit;
+    }
+
+    b {
+      font-weight: bold;
+    }
   }
 }
+
 .layoutHeader {
   background: rgb(230, 230, 230);
   gap: 5px;
@@ -47,6 +80,21 @@ button[type=''] {
   display: flex;
   padding: 0 20px;
   align-items: center;
+  position: sticky;
+  top: 0;
+  button {
+    background: none;
+    padding: 0.5em;
+    margin: 0;
+    margin-right: 0.5em;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0.2em;
+    cursor: pointer;
+    &:hover {
+      background-color: #f9f9f9;
+    }
+  }
 }
 .layoutMain {
   width: 100vw;

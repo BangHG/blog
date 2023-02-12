@@ -4,78 +4,111 @@ const List = () => {
   return (
     <div className="layoutList">
       <h3>React 교재</h3>
-      <ul style={{ display: 'grid', listStyle: 'disc', padding: '1em', rowGap: '0.5em' }}>
+      <ul>
         <li>
           <Link to={'/IterationSample2'}>
-            <span style={{ minWidth: '2.7em', display: 'inline-block', marginRight: '0.3em' }}>#6</span>
-            <b>useState, map:</b> 이벤트 핸들링 예제
+            <span>#6</span>
+            <p>
+              <b>useState, map:</b> 이벤트 핸들링 예제 : 반복/추가/삭제
+            </p>
           </Link>
         </li>
 
         <li>
           <Link to={'/Info5'}>
-            <span style={{ minWidth: '2.7em', display: 'inline-block', marginRight: '0.3em' }}>#8</span>
-            <b>useEffect, useState, useReducer:</b> 인풋관리
+            <span>#8</span>
+            <p>
+              <b>useEffect, useState, useReducer:</b> 인풋관리
+            </p>
           </Link>
         </li>
         <li>
           <Link to={'/Counter'}>
-            <span style={{ minWidth: '2.7em', display: 'inline-block', marginRight: '0.3em' }}>#8.3</span>
-            <b>useReducer:</b> 카운터 구현하기
+            <span>#8.3</span>
+            <p>
+              <b>useReducer:</b> 카운터 구현하기
+            </p>
           </Link>
         </li>
         <li>
           <Link to={'/Average3'}>
-            <span style={{ minWidth: '2.7em', display: 'inline-block', marginRight: '0.3em' }}>#8.4</span>
-            <b>useMemo, useCallback, useRef:</b> 평균구하기
+            <span>#8.4</span>
+            <p>
+              <b>useMemo, useCallback, useRef:</b> 평균구하기
+            </p>
           </Link>
         </li>
         <li>
           <Link to={'/CSSModule'}>
-            <span style={{ minWidth: '2.7em', display: 'inline-block', marginRight: '0.3em' }}>#9.3 </span>
-            <b>CSS:</b> CSS Module
+            <span>#9.3 </span>
+            <p>
+              <b>CSS:</b> CSS Module
+            </p>
           </Link>
         </li>
         <li>
           <Link to={'/CSSinJS'}>
-            <span style={{ minWidth: '2.7em', display: 'inline-block', marginRight: '0.3em' }}>#9.4</span>
-            <b>CSS:</b> styled-components
+            <span>#9.4</span>
+            <p>
+              <b>CSS:</b> styled-components
+            </p>
           </Link>
         </li>
         <li>
           <Link to={'/TodoList'}>
-            <span style={{ minWidth: '2.7em', display: 'inline-block', marginRight: '0.3em' }}>#10</span>
-            <b>App:</b> TodoList.js
+            <span>#10</span>
+            <p>
+              <b>App:</b> TodoList.js
+            </p>
           </Link>
         </li>
         <li>
           <Link to={'/TodoList2'}>
-            <span style={{ minWidth: '2.7em', display: 'inline-block', marginRight: '0.3em' }}>#11</span>
-            <b>App:</b> TodoList.js : 최적화
+            <span>#11</span>
+            <p>
+              <b>App:</b> TodoList.js : 최적화
+            </p>
+          </Link>
+        </li>
+        <li>
+          <Link to={'/About'}>
+            <span>#13</span>
+            <p>
+              <b>Route</b> useSearchParam
+            </p>
+          </Link>
+        </li>
+        <li>
+          <Link to={'/Articles'}>
+            <span>#13.5</span>
+            <p>
+              <b>Route</b> 중첩된 라우트
+            </p>
           </Link>
         </li>
       </ul>
-      <hr style={{ minWidth: '2.7em', display: 'inline-block', margin: '20px auto' }} />
+      <hr />
       <h3>기타</h3>
-      <ul style={{ display: 'grid', listStyle: 'disc', padding: '1em', rowGap: '0.5em' }}>
+      <ul>
         <li>
           <Link to={'/blog'}>
-            <b> :</b> 블로그 Blog (코딩애플)
-          </Link>
-        </li>
-        <li>
-          <Link to={'/IterationSample'}>
-            <b> :</b> 반복 IterationSample
+            <p>
+              <b> :</b> 블로그 Blog (코딩애플)
+            </p>
           </Link>
         </li>
         <li>
           <Link to={'/ReduxApple'}>
-            <b> :</b> redux AppleCoding 강좌
+            <p>
+              <b> :</b> redux AppleCoding 강좌
+            </p>
           </Link>
         </li>
         <li>
           <Link to={'/TodoListWeb'}>
-            <b> :</b> TodoList.js : 패캠버전
+            <p>
+              <b> :</b> TodoList.js : 패캠버전
+            </p>
           </Link>
         </li>
       </ul>

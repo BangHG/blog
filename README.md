@@ -220,14 +220,14 @@
     - #13.2.5 Link 컴포넌트를 사용하여 다른 주소로 이동하기
   - #13.3 Route 하나에 여러 개의 path 설정하기
   - #13.4 URL 파라미터와 쿼리
-    - #13.4.1 URL 파라미터
-    - #13.4.2 URL 쿼리
+    - #13.4.1 URL 파라미터 : useParams [Article.js](src\pages\Article.js)
+    - #13.4.2 URL 쿼리 : useSerchParams [About.js](src\pages\About.js)
   - #13.5 서브 라우트
-  - #13.6 리액트 라우터 부가 기능
-    - #13.6.1 history
-    - #13.6.2 withRouter
-    - #13.6.3 Switch
-    - #13.6.4 NavLink
+  - #13.6 리액트 라우터 부가 기능 
+    - #13.6.1 useNavigate : history  [Layout.js](src\Layout.js)
+    - #13.6.2 NavLink : 경로 일치 시 스타일 적용 [Articles.js](src\pages\Articles.js)
+    - #13.6.3 NotFound 페이지 만들기 [App.js](src\App.js)
+    - #13.6.4 Navigate 컴포넌트 : 리다이렉트 [Mypage.js](src\pages\Mypage.js)
   - #13.7 정리
 
 ---
