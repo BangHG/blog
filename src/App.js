@@ -31,10 +31,15 @@ import NotFound from './pages/NotFound';
 import Login from './pages/Login';
 import Mypage from './pages/Mypage';
 
+import News from './news/App';
+
 const App = () => {
   return (
     <>
       <Routes>
+        {/* #13.6.3 NotFound 페이지 만들기 */}
+        <Route path="*" element={<NotFound />}></Route>
+
         <Route element={<Layout />}>
           <Route index element={<List />}></Route>
           <Route path="/Blog" element={<Blog />}></Route>
@@ -62,10 +67,10 @@ const App = () => {
           {/* #13.6.4 Navigate 컴포넌트 */}
           <Route path="/Login" element={<Login />}></Route>
           <Route path="/Mypage" element={<Mypage />}></Route>
-        </Route>
 
-        {/* #13.6.3 NotFound 페이지 만들기 */}
-        <Route path="*" element={<NotFound />}></Route>
+          {/* #14.2 axios로 API 호출해서 데이터 받아 오기 */}
+          <Route path="/News" element={<News />}></Route>
+        </Route>
       </Routes>
     </>
   );

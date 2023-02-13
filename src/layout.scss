@@ -87,6 +87,7 @@ button[type=''] {
   padding: 0 20px;
   align-items: center;
   position: sticky;
+  z-index: 100;
   top: 0;
   button {
     background: none;
@@ -103,7 +104,8 @@ button[type=''] {
   }
 }
 .layoutMain {
-  width: 100vw;
+  // width: 100vw;
+  width: 100%;
   background-color: #fff;
   padding: 20px;
   min-height: calc(100vh - 50px);

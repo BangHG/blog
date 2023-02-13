@@ -1,12 +1,6 @@
 import { Link } from 'react-router-dom';
+import Title from './Title.js';
 
-function Title({ children }) {
-  return (
-    <h3 className="layoutList__title">
-      <span>{children}</span>
-    </h3>
-  );
-}
 const List = () => {
   return (
     <div className="layoutList">
@@ -101,7 +95,27 @@ const List = () => {
             </p>
           </Link>
         </li>
+        <li>
+          <Link to={'/News'}>
+            <span>#14.2</span>
+            <p>
+              <b>Axios</b> NEWS 데이터 호출하기
+            </p>
+          </Link>
+        </li>
       </ul>
+
+      {/* 
+888    888 8888888b.  
+888    888 888   Y88b 
+888    888 888    888 
+8888888888 888   d88P 
+888    888 8888888P"  
+888    888 888 T88b   
+888    888 888  T88b  
+888    888 888   T88b 
+*/}
+
       <hr />
       <Title>기타</Title>
       <ul>
