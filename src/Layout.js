@@ -40,7 +40,7 @@ const Layout = () => {
     <div className="App">
       <header className="layoutHeader">{headerContent}</header>
       <main className="layoutMain">
-        <Outlet></Outlet>
+        <Outlet />
       </main>
       {/* <footer className="layoutFooter">푸터입니다</footer> */}
     </div>

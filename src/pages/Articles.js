@@ -1,32 +1,5 @@
 ﻿import { Outlet, NavLink } from 'react-router-dom';
-
-const Articles = () => {
-  return (
-    <div>
-      <ul>
-        <ArticleItem id={1} />
-        <ArticleItem id={2} />
-        <ArticleItem id={'🎈'} />
-        <ArticleItem id={'🎋'} />
-        <ArticleItem id={'🎨'} />
-      </ul>
-
-      <Outlet />
-      <code style={{ display: 'block', margin: '1em 0', background: '#ddd', padding: '1em' }}>
-        &lt;ul&gt;
-        <br /> &lt;li&gt;
-        <br /> &lt;Link to="/Articles/1"&gt;게시글 1/Link&gt;
-        <br /> &lt;/li&gt;
-        <br />
-        ...
-        <br />
-        &lt;/ul&gt;
-        <br />
-        &lt;Outlet /&gt;
-      </code>
-    </div>
-  );
-};
+import { Fragment } from 'react';
 
 const ArticleItem = ({ id }) => {
   // #13.6.2 NavLink : 경로 일치 시 스타일 적용
@@ -44,4 +17,39 @@ const ArticleItem = ({ id }) => {
     </li>
   );
 };
+
+const Articles = () => {
+  const Tab = ({ tab }) => {
+    return (
+      <span>
+        <br />
+        <span style={{ width: `${tab != null ? tab + 'em' : '1em'}`, display: 'inline-block' }} />
+      </span>
+    );
+  };
+  return (
+    <div>
+      <ul>
+        <ArticleItem id={1} />
+        <ArticleItem id={2} />
+        <ArticleItem id={'🎈'} />
+        <ArticleItem id={'🎋'} />
+        <ArticleItem id={'🎨'} />
+      </ul>
+      <Outlet />
+
+      <code style={{ display: 'block', margin: '1em 0', background: '#ddd', padding: '1em' }}>
+        &lt;ul&gt;
+        <Tab /> &lt;li&gt;
+        <Tab tab="2" /> &lt;Link to="/Articles/1"&gt;게시글 1/Link&gt;
+        <Tab /> &lt;/li&gt;
+        <Tab />
+        ...<br></br> &lt;/ul&gt;
+        <br />
+        &lt;Outlet /&gt; : 이 Route가 감싸고 있는 것을 노출 : Article.js
+      </code>
+    </div>
+  );
+};
+
 export default Articles;

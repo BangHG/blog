@@ -14,17 +14,22 @@ const getAverage = (numbers) => {
 
 const Average = () => {
   const [list, setList] = useState([]); //list는 빈배열.
-  const [number, setNumber] = useState();
+  const [number, setNumber] = useState('');
   const inputEl = useRef(null); //## useRef 선언!
 
   const onChange = useCallback((e) => {
     setNumber(e.target.value);
   }, []);
+
   const onInsert = useCallback(
     (e) => {
-      const nextList = list.concat(parseInt(number));
-      setList(nextList);
-      setNumber('');
+      if (number.length > 0 && number != '') {
+        const nextList = list.concat(parseInt(number));
+        setList(nextList);
+        setNumber('');
+      } else {
+        return false;
+      }
       inputEl.current.focus(); //##inputEl(ref)사용하여 Element 찾기!
     },
     [number, list]
@@ -43,7 +48,7 @@ const Average = () => {
           <li key={index}>{value}</li>
         ))}
       </ul>
-      <div>평균값 = {avg}</div>
+      <div>평균값 = {avg}</div>??
     </div>
   );
 };
