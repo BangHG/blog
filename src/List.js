@@ -96,10 +96,18 @@ const List = () => {
           </Link>
         </li>
         <li>
-          <Link to={'/News'}>
+          <Link to={'/NewsApi'}>
             <span>#14.2</span>
             <p>
               <b>Axios</b> NEWS 데이터 호출하기
+            </p>
+          </Link>
+        </li>
+        <li>
+          <Link to={'/NewsPage/'}>
+            <span>#14.2</span>
+            <p>
+              <b>News Stand</b> NEWS
             </p>
           </Link>
         </li>

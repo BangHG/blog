@@ -31,7 +31,9 @@ import NotFound from './pages/NotFound';
 import Login from './pages/Login';
 import Mypage from './pages/Mypage';
 
+import NewsApi from './news/App.14.2';
 import News from './news/App';
+import NewsPage from './news/NewsPage';
 
 const App = () => {
   return (
@@ -69,7 +71,11 @@ const App = () => {
           <Route path="/Mypage" element={<Mypage />}></Route>
 
           {/* #14.2 axios로 API 호출해서 데이터 받아 오기 */}
+          <Route path="/NewsApi" element={<NewsApi />}></Route>
+
           <Route path="/News" element={<News />}></Route>
+          <Route path="/NewsPage" element={<NewsPage />}></Route>
+          <Route path="/NewsPage/:category" element={<NewsPage />}></Route>
         </Route>
       </Routes>
     </>

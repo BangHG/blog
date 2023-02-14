@@ -17,7 +17,6 @@ const NewsItemBlock = styled.div`
   }
   @media screen and (max-width: 768px) {
     width: 100%;
-    padding: 0 1rem 3rem;
   }
 `;
 
@@ -32,7 +31,7 @@ const NewsList = ({ category }) => {
         const query = category === 'all' ? '' : `&category=${category}`;
         const res = await axios.get(`https://newsapi.org/v2/top-headlines?country=kr${query}&apiKey=5865802cda1345e8a3667d3cc622627d`);
         setArticles(res.data.articles);
-        // console.log(query);
+        // console.log(res.data);
       } catch (e) {
         console.log(e);
       }

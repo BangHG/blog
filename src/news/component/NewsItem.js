@@ -11,7 +11,6 @@ const NewsItemBlock = styled.div`
     background-color: #f9f9f9;
   }
   .thumbnail {
-    margin-right: 1rem;
     border: 1px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
@@ -28,6 +27,7 @@ const NewsItemBlock = styled.div`
     }
   }
   .contents {
+    margin: 0 1rem;
     word-break: keep-all;
     h2 {
       margin: 0;

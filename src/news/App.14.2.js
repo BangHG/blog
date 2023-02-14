@@ -30,7 +30,7 @@ const App = () => {
         <button onClick={onClick}>불러오기!</button>
       </div>
 
-      {data && <textarea rows={10} value={JSON.stringify(data, null, 2)} readOnly={true}></textarea>}
+      {data && <textarea rows={50} value={JSON.stringify(data, null, 2)} readOnly={true}></textarea>}
     </div>
   );
 };
