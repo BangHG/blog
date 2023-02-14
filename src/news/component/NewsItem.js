@@ -31,6 +31,7 @@ const NewsItemBlock = styled.div`
     word-break: keep-all;
     h2 {
       margin: 0;
+      line-height: 1.2;
       a {
         color: black;
         text-decoration: none;

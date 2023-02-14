@@ -250,7 +250,7 @@
   - #14.7.1 리액트 라우터의 설치 및 적용
   - #14.7.2 NewsPage 생성
   - #14.7.3 Categories에서 NavLink 사용하기
-- #14.8 usePromise 커스텀 Hook 만들기
+- #14.8 usePromise 커스텀 Hook 만들기 [usePromise.js](src\news\lib\usePromise.js)
 - #14.9 정리
 
 ---
