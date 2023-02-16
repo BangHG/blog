@@ -107,7 +107,7 @@ const List = () => {
           <Link to={'/NewsPage/'}>
             <span>#14.2</span>
             <p>
-              <b>News Stand</b> NEWS
+              <b>App:</b> News Stand
             </p>
           </Link>
         </li>

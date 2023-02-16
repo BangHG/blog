@@ -3,12 +3,15 @@
 const NewsItemBlock = styled.div`
   display: flex;
   padding: 1.5em 0;
-  & + & {
-    border-top: 2px dashed #ddd;
-  }
   transition: 500ms background-color;
+  @media all and (max-width: 480px) {
+    flex-wrap: wrap;
+  }
   &:hover {
     background-color: #f9f9f9;
+  }
+  & + & {
+    border-top: 2px dashed #ddd;
   }
   .thumbnail {
     border: 1px solid #ddd;
@@ -17,17 +20,28 @@ const NewsItemBlock = styled.div`
     position: relative;
     flex: 0 0 160px;
     height: 160px;
-    /* background: url(//via.placeholder.com/160x160); */
+    margin-right: 1rem; /* background: url(//via.placeholder.com/160x160); */
     font-size: 0;
     img {
       display: block;
-      width: 160px;
-      height: 160px;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
+    }
+    @media all and (max-width: 1024px) and (min-width: 479.8px) {
+      flex: 0 0 max(90px, 20vw);
+      height: max(90px, 20vw);
+    }
+    @media all and (max-width: 480px) {
+      flex: 0 0 100%;
+      height: auto;
+      aspect-ratio: 2/1;
+      margin: 0;
+      margin-bottom: 1rem;
     }
   }
   .contents {
-    margin: 0 1rem;
+    flex: 1 1 auto;
     word-break: keep-all;
     h2 {
       margin: 0;
@@ -39,6 +53,7 @@ const NewsItemBlock = styled.div`
       }
     }
     p {
+      word-break: break-all;
       margin: 0;
       line-height: 1.5;
       margin-top: 0.5rem;
