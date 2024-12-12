@@ -35,6 +35,8 @@ import NewsApi from './news/App.14.2';
 import News from './news/App';
 import NewsPage from './news/NewsPage';
 
+import ContextAPI from './ContextAPI/App';
+
 const App = () => {
   return (
     <>
@@ -76,6 +78,8 @@ const App = () => {
           <Route path="/News" element={<News />}></Route>
           <Route path="/NewsPage" element={<NewsPage />}></Route>
           <Route path="/NewsPage/:category" element={<NewsPage />}></Route>
+
+          <Route path="/ContextAPI" element={<ContextAPI />}></Route>
         </Route>
       </Routes>
     </>

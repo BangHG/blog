@@ -283,7 +283,7 @@
   - #15.3.2 새로워진 Context를 프로젝트에 반영하기
   - #15.3.3 색상 선택 컴포넌트 만들기
 - #15.4 Consumer 대신 Hook 또는 static contextType 사용하기
-  - #15.4.1 useContext Hook 사용하기
+  - #15.4.1 useContext Hook 사용하기 [ColorBox.js](src\ContextAPI\ColorBox.js)
   - #15.4.2 static contextType 사용하기
 - #15.5 정리
 
