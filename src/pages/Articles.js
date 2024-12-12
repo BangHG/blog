@@ -6,7 +6,7 @@ const ArticleItem = ({ id }) => {
   const activeStyle = {
     backgroundColor: '#ff0',
     color: '#000',
-    fontWeight: 500,
+    fontWeight: 600,
   };
   return (
     <li style={{ margin: '0.2em 0' }}>
@@ -20,6 +20,7 @@ const ArticleItem = ({ id }) => {
 
 const Articles = () => {
   const Tab = ({ tab }) => {
+    //codeblock 내 줄바꿈+tab들여쓰기 component
     return (
       <span>
         <br />
